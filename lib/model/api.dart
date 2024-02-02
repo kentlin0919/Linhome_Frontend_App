@@ -2,8 +2,8 @@ import 'package:linhome_frontend_app/import.dart';
 
 
 class api {
-  void post (){
-
+  String post (){
+    return 'kent';
   }
 
   void get (){
@@ -15,6 +15,6 @@ class api {
   }
 
   void put(){
-    
+
   }
 }

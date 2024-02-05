@@ -10,6 +10,7 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   var usernamecontroller = TextEditingController();
   var passwordcontroller = TextEditingController();
+  bool passwordObscureText = true;
 
   @override
   void initState() {
@@ -48,7 +49,24 @@ class _LoginState extends State<Login> {
               child: TextFormField(
                 cursorWidth: 1,
                 controller: passwordcontroller,
-                decoration: const InputDecoration(hintText: "password"),
+                obscureText: passwordObscureText,
+                decoration: InputDecoration(
+                  hintText: "password",
+                  suffixIcon: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        passwordObscureText =
+                            passwordObscureText ? false : true;
+                      });
+                    },
+                    child: Icon(
+                      passwordObscureText
+                          ? Icons.visibility_off_rounded
+                          : Icons.visibility_rounded,
+                      size: 24,
+                    ),
+                  ),
+                ),
               ),
             ),
             const SizedBox(
@@ -81,10 +99,9 @@ class _LoginState extends State<Login> {
                           MaterialStateProperty.all<Color>(Colors.blue)),
                   onPressed: () {
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Register()),
-                        );
+                      context,
+                      MaterialPageRoute(builder: (context) => const Register()),
+                    );
                   },
                   child: const Text(
                     "註冊",

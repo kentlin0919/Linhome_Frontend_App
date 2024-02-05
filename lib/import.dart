@@ -1,7 +1,8 @@
 //頁面view
 
-export 'package:linhome_frontend_app/view/login.dart';
+export 'package:linhome_frontend_app/view/account/login.dart';
 export 'package:linhome_frontend_app/view/apploading.dart';
+export 'package:linhome_frontend_app/view/account/register.dart';
 
 
 //Model

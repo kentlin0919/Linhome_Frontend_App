@@ -3,6 +3,7 @@
 export 'package:linhome_frontend_app/view/account/login.dart';
 export 'package:linhome_frontend_app/view/apploading.dart';
 export 'package:linhome_frontend_app/view/account/register.dart';
+export 'package:linhome_frontend_app/view/home.dart';
 
 
 //Model

@@ -4,7 +4,7 @@ class LoginController {
   LoginController(String username, String password) {
     var test = LoginModel().Login(username, password);
     if (test == username) {
-      debugPrint(username);
+     
     } else {
       debugPrint(password);
     }
